@@ -20,6 +20,25 @@
         </button>
       </p>
     </div>
+    <div id="bootstrap-test">
+      <b-button
+        variant="primary"
+        class="test-b-button"
+        @click="increment"
+        v-b-tooltip.hover
+        :title="countTooltip" 
+      >
+        Hover over me!
+      </b-button>
+      <b-button
+        variant="primary"
+        @click="increment"
+        v-b-tooltip.hover
+        :title="countTooltip" 
+      >
+        Hover over me!
+      </b-button>
+    </div>
   </div>
 </template>
 
@@ -32,6 +51,11 @@ export default {
       count: 0
     }
   },
+  computed: {
+    countTooltip () {
+      return `Count: ${this.count}`;
+    }
+  },
   methods: {
     increment() {
       this.count++;
@@ -41,6 +65,9 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../imports/scss/themes/custom.scss';
+  @import '../imports/scss/symlinks/bootstrap/bootstrap.scss';
+  @import '../imports/scss/symlinks/bootstrap-vue/index.scss';
   @import '../imports/scss/button/filled';
   @import '../imports/scss/header/test';
 
@@ -50,5 +77,23 @@ export default {
 
   .test-header {
     @include header-test(#6655dd, true);
+  }
+
+  .test-b-button {
+    $bg-color: #6655dd;
+    background-color: $bg-color;
+    border-color: #00000000;
+    &:hover {
+      border-color: #00000000;
+      background-color: lighten($bg-color, 10%);
+    }
+    &:active {
+      border-color: #00000000;
+      background-color: darken($bg-color, 10%) !important;
+    }
+    &:focus {
+      border-color: #00000000;
+      box-shadow: 0px 0px 0px 3px transparentize(lighten($bg-color, 0.5), 0.5);
+    }
   }
 </style>
