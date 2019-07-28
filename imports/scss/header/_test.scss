@@ -1,0 +1,7 @@
+@mixin header-test($color: #fff, $dark: false) {
+  $text-color: if($dark, #fff, #000);
+  transition: 0.1s ease-in-out;
+  background-color: $color;
+  padding: 5px;
+  color: $text-color;
+}
