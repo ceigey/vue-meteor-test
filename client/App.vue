@@ -38,6 +38,7 @@
       >
         Hover over me!
       </b-button>
+
     </div>
   </div>
 </template>
@@ -65,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../imports/scss/themes/custom.scss';
+  /* @import '../imports/scss/themes/custom.scss'; */
   @import '../imports/scss/symlinks/bootstrap/bootstrap.scss';
   @import '../imports/scss/symlinks/bootstrap-vue/index.scss';
   @import '../imports/scss/button/filled';

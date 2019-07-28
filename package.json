@@ -13,7 +13,9 @@
     "bootstrap-vue": "^2.0.0-rc.27",
     "meteor-node-stubs": "^0.4.1",
     "portal-vue": "^2.1.5",
-    "vue": "^2.6.10"
+    "simpl-schema": "^1.5.5",
+    "vue": "^2.6.10",
+    "vue-meteor-tracker": "^2.0.0-beta.5"
   },
   "meteor": {
     "mainModule": {
