@@ -58,14 +58,14 @@ export default {
 
 <style lang="scss">
   .under-navbar-space {
-    overflow: auto;
-    height: 80vh;
+    /* overflow: auto; */
+    /* height: 80vh; */
   }
 
   .in-app-router-view {
     padding-top: 2em;
     padding-bottom: 2em;
     overflow: auto;
-    height: 100vh;
+    /* height: 100vh; */
   }
 </style>

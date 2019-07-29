@@ -3,7 +3,12 @@
     toggleable="lg"
     variant="dark"
     type="dark"
+    class="shadow"
   >
+  <!--
+    fixed="top"
+    sticky
+    -->
     <b-button @click="$store.dispatch('nav/toggleSidebar')">
       Menu
     </b-button>
