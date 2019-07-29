@@ -16,7 +16,9 @@
     "portal-vue": "^2.1.5",
     "simpl-schema": "^1.5.5",
     "vue": "^2.6.10",
-    "vue-meteor-tracker": "^2.0.0-beta.5"
+    "vue-meteor-tracker": "^2.0.0-beta.5",
+    "vue-router": "^3.0.7",
+    "vuex": "^3.1.1"
   },
   "meteor": {
     "mainModule": {

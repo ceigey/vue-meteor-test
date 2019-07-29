@@ -36,8 +36,8 @@
     </b-input-group>
 
     {{ selectedWorld }}
-
-    <div class="hmr-demo">
+    
+    <div class="hmr-demo" v-if="selectedWorld">
       <h1>HMR Demo</h1>
       <dl>
         <dt>_id:</dt>
