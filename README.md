@@ -14,4 +14,5 @@
 * https://polished.js.org
 * https://github.com/emotion-js/facepaint
 * https://sass-lang.com/documentation/at-rules/mixin
-* 
+* https://github.com/Microsoft/vscode-recipes/tree/master/meteor
+

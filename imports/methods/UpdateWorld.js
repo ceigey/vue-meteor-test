@@ -9,9 +9,7 @@ export let renameWorld = new ValidatedMethod({
     id: String,
     name: String
   }).validator(),
-  run({ id, 
-    
-    name }) {
+  run({ id, name }) {
     World.update(id, { $set: {
       name,
       updated: new Date() 
