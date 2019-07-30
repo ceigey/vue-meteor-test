@@ -13,7 +13,8 @@
       Menu
     </b-button>
     <b-navbar-brand to="/home">
-      <strong>Vuerld</strong>Build<strong><em>r</em></strong>
+      <!-- <font-awesome-icon class="app-icon" icon="globe" size="xs"></font-awesome-icon> -->
+      <strong class="text-success">World</strong>Vue
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -52,8 +53,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .user-menu {
     transition: box-shadow 0.2s ease-in-out;
+  }
+  .app-icon {
+    font-size: 10px;
+    color: white;
   }
 </style>

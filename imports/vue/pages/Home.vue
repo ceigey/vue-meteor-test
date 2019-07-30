@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <h1>
-      Welcome to <strong>Vuerld</strong>Build<strong><em>r</em></strong>
+      Welcome to <strong class="text-success">World</strong>Vue
     </h1>
     <p>
       This is the #1 site for building intricate

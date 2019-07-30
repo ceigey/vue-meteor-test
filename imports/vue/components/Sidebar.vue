@@ -7,7 +7,7 @@
 <style lang="scss" scoped>
   .vbr-navbar {
     $width: 200px;
-    position: absolute;
+    /* position: absolute; */
     height: 80vh;
     width: $width;
     transition: 0.2 ease-in-out;
