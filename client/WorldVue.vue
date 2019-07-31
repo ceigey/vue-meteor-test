@@ -28,7 +28,7 @@
             :full="showNav"
           >
             <font-awesome-icon slot="icon" icon="globe-asia" />
-            Worldssssssss
+            Worlds
           </wv-nav-link>
       </wv-nav>
       <main class="wv-main">
