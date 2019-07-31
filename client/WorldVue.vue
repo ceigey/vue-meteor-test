@@ -96,7 +96,7 @@ export default {
       "nav main"
       "footer footer"
     ;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: auto 1fr; /* 200px 1fr */
     grid-template-rows: auto 1fr;
     grid-gap: 0px;
     height: 100vh;
@@ -118,7 +118,7 @@ export default {
   }
 
   .nav-small {
-    grid-template-columns: 75px 1fr;
+    grid-template-columns: auto 1fr; /* 75px 1fr */
   }
 
   /* .nav-small {
