@@ -1,16 +1,16 @@
 export default {
   namespaced: true,
   state: {
-    showSidebar: true
+    showNav: true
   },
   mutations: {
-    toggleSidebar(state) {
-      state.showSidebar = !state.showSidebar;
+    toggleNav(state) {
+      state.showNav = !state.showNav;
     }
   },
   actions: {
-    toggleSidebar(context) {
-      context.commit('toggleSidebar');
+    toggleNav(context) {
+      context.commit('toggleNav');
     }
   },
   getters: {}

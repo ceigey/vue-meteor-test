@@ -16,3 +16,5 @@
 * https://sass-lang.com/documentation/at-rules/mixin
 * https://github.com/Microsoft/vscode-recipes/tree/master/meteor
 
+* https://alligator.io/css/css-grid-holy-grail-layout/
+* https://stackoverflow.com/questions/43911880/using-css-transitions-in-css-grid-layout
