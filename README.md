@@ -18,3 +18,4 @@
 
 * https://alligator.io/css/css-grid-holy-grail-layout/
 * https://stackoverflow.com/questions/43911880/using-css-transitions-in-css-grid-layout
+* https://stackoverflow.com/questions/39478032/vue-js-pass-function-as-prop-and-make-child-call-it-with-data

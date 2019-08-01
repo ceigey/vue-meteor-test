@@ -3,7 +3,7 @@
     <div :class="showNav ? 'app-container-full' : 'app-container-full nav-small'">
       <wv-header></wv-header>
       <wv-nav class="bg-dark text-light">
-          <wv-nav-collapse>
+          <wv-nav-collapse @click="$store.dispatch('nav/toggleNav')">
             <font-awesome-icon icon="ellipsis-h" />
           </wv-nav-collapse>
           <wv-nav-link
@@ -41,8 +41,6 @@
   </div>
 </template>
 
-<!-- <router-view class="in-app-router-view"></router-view> -->
-
 <script>
 import { Meteor } from 'meteor/meteor';
 import World from '#/imports/collections/World';
@@ -50,9 +48,6 @@ import WvHeader from '#/imports/vue/components/Header.vue';
 import WvNav from '#/imports/vue/components/Nav.vue';
 import WvNavLink from '#/imports/vue/components/NavLink.vue';
 import WvNavCollapse from '#/imports/vue/components/NavCollapse.vue'
-// import WvNav from '#/imports/vue/components/Nav.vue';
-// import WvFooter from '#/imports/vue/components/Footer.vue';
-// import WvSidebarLink from '#/imports/vue/components/SidebarLink.vue';
 // @ts-check
 export default {
   components: {
@@ -60,7 +55,6 @@ export default {
     WvNav,
     WvNavLink,
     WvNavCollapse
-    // WvSidebarLink
   },
   data () {
     return {

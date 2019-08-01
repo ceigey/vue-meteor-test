@@ -1,14 +1,20 @@
 <template>
   <button
     class="nav-collapse"
-    @click="$store.dispatch('nav/toggleNav')"
+    @click="click"
   >
     <slot></slot>
   </button>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    click() {
+      this.$emit('click');
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
