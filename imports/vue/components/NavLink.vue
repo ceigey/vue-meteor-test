@@ -1,17 +1,12 @@
 <template>
-  <router-link :to="to" v-if="isCurrent" class="wv-nav-link bg-success">
+  <router-link :to="to" :class="isCurrentLinkStyle">
     <slot name="icon"></slot>
-    <span v-if="full">&nbsp;</span>
-    <slot name="text" v-if="full">
-      <slot />
-    </slot>
-  </router-link>
-  <router-link :to="to" v-else class="wv-nav-link inactive-bg">
-    <slot name="icon"></slot>
-    <span v-if="full">&nbsp;</span>
-    <slot name="text" v-if="full">
-      <slot />
-    </slot>
+    <span :class="isCurrentTextStyle">
+      &nbsp;
+      <slot name="text">
+        <slot />
+      </slot>
+    </span>
   </router-link>
 </template>
 
@@ -26,6 +21,20 @@ export default {
   computed: {
     isCurrent() {
       return this.to === this.current;
+    },
+    isCurrentLinkStyle() {
+      if (this.isCurrent) {
+        return 'wv-nav-link bg-success';
+      } else {
+        return 'wv-nav-link inactive-bg';
+      }
+    },
+    isCurrentTextStyle() {
+      if (this.full) {
+        return 'nav-text opaque-text';
+      } else {
+        return 'nav-text transparent-text';
+      }
     }
   }
 }
@@ -66,5 +75,17 @@ export default {
     &:active {
       background-color: #000000bb;
     }
+  }
+
+  .nav-text {
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .opaque-text {
+    opacity: 1;
+  }
+
+  .transparent-text {
+    opacity: 0;
   }
 </style>
