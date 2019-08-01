@@ -32,7 +32,9 @@
           </wv-nav-link>
       </wv-nav>
       <main class="wv-main">
-        <router-view></router-view>
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
       </main>
       <footer class="bg-success text-light">
         Maybe I'll put tooltips here?
@@ -44,10 +46,10 @@
 <script>
 import { Meteor } from 'meteor/meteor';
 import World from '#/imports/collections/World';
-import WvHeader from '#/imports/vue/components/Header.vue';
-import WvNav from '#/imports/vue/components/Nav.vue';
-import WvNavLink from '#/imports/vue/components/NavLink.vue';
-import WvNavCollapse from '#/imports/vue/components/NavCollapse.vue'
+import WvHeader from '#/imports/vue/components/WvHeader.vue';
+import WvNav from '#/imports/vue/components/WvNav.vue';
+import WvNavLink from '#/imports/vue/components/WvNavLink.vue';
+import WvNavCollapse from '#/imports/vue/components/WvNavCollapse.vue'
 // @ts-check
 export default {
   components: {
@@ -70,14 +72,6 @@ export default {
 </script>
 
 <style lang="scss">
-  /* .app-container {
-    padding: 0px;
-    margin: 0px;
-    & .sidebar-column {
-      width: 200px;
-    }
-  } */
-
   /* https://alligator.io/css/css-grid-holy-grail-layout/ */
   .app-container-full {
     transition: 0.2s ease-in-out;
@@ -115,20 +109,21 @@ export default {
     grid-template-columns: auto 1fr; /* 75px 1fr */
   }
 
-  /* .nav-small {
-    animation: 0.2s nav-small cubic-bezier(.86,0,.07,1) 0.4s both
-  }
-  @keyframes nav-small {
-    0% {
-      grid-template-columns: 200px 1fr;
-    }
-    100% {
-      grid-template-columns: 100px 1fr;
-    }
-  } */
-
   .wv-main {
     padding: 20px;
+  }
+
+  /**
+    Vue transitions follow a certain syntax
+    e.g. [NAME]-[ENTER/?]-[ACTIVE]
+  **/
+
+  .fade-enter-active {
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 
 </style>

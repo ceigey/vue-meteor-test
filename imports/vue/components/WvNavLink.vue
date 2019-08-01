@@ -1,5 +1,10 @@
 <template>
-  <router-link :to="to" :class="isCurrentLinkStyle">
+  <router-link
+    :to="to"
+    :class="isCurrentLinkStyle"
+    :title="to"
+    v-tippy
+  >
     <slot name="icon"></slot>
     <span :class="isCurrentTextStyle">
       &nbsp;
