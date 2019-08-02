@@ -7,6 +7,7 @@ import BootstrapVue from 'bootstrap-vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import VueTippy from 'vue-tippy';
 
 import routes from '#/imports/routes/WorldVue';
 import modules from '#/imports/store/Modules';
@@ -28,6 +29,7 @@ Meteor.startup(() => {
   Vue.use(BootstrapVue);
   Vue.use(VueMeteorTracker);
   Vue.use(VueRouter);
+  Vue.use(VueTippy);
   Vue.use(Vuex);
   Vue.component('font-awesome-icon', FontAwesomeIcon);
 

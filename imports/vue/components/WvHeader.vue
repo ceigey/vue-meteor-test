@@ -1,17 +1,14 @@
 <template>
   <b-navbar
+    tag="header"
     toggleable="lg"
     variant="dark"
     type="dark"
     class="shadow"
   >
-  <!--
-    fixed="top"
-    sticky
-    -->
-    <b-button @click="$store.dispatch('nav/toggleSidebar')">
+    <!-- <b-button @click="$store.dispatch('nav/toggleSidebar')">
       Menu
-    </b-button>
+    </b-button> -->
     <b-navbar-brand to="/home">
       <!-- <font-awesome-icon class="app-icon" icon="globe" size="xs"></font-awesome-icon> -->
       <strong class="text-success">World</strong>Vue
@@ -46,11 +43,7 @@
 </template>
 
 <script>
-export default {
-  props: {
-    toggleSidebar: Function
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
