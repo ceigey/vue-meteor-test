@@ -29,7 +29,13 @@ Meteor.startup(() => {
   Vue.use(BootstrapVue);
   Vue.use(VueMeteorTracker);
   Vue.use(VueRouter);
-  Vue.use(VueTippy);
+  Vue.use(VueTippy, {
+    popperOptions: {
+      modifiers: {
+        preventOverflow: { enabled: false }
+      }
+    }
+  });
   Vue.use(Vuex);
   Vue.component('font-awesome-icon', FontAwesomeIcon);
 

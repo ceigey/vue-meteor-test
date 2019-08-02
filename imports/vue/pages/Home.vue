@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <h1>
+    <h1 title="This is the Welcome header" v-tippy="{ theme: 'light' }">
       Welcome to <strong class="text-success">World</strong>Vue
     </h1>
     <p>

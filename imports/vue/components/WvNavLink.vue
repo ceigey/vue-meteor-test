@@ -3,7 +3,7 @@
     :to="to"
     :class="isCurrentLinkStyle"
     :title="to"
-    v-tippy
+    v-tippy="{ placement: 'right' }"
   >
     <slot name="icon"></slot>
     <span :class="isCurrentTextStyle">

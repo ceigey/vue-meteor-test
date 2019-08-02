@@ -2,6 +2,8 @@
   <button
     class="nav-collapse"
     @click="click"
+    title="Toggle the full nav"
+    v-tippy="{ placement: 'right' }"
   >
     <slot></slot>
   </button>

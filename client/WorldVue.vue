@@ -36,7 +36,7 @@
           <router-view></router-view>
         </transition>
       </main>
-      <footer class="bg-success text-light">
+      <footer class="wv-footer text-light">
         Maybe I'll put tooltips here?
       </footer>
     </div>
@@ -124,6 +124,16 @@ export default {
 
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
+  }
+
+  .wv-footer {
+    padding: 3px;
+    padding-left: 15px;
+    font-size: 0.9em;
+    /* border-top-style: solid; */
+    /* border-top-color: #000; */
+    /* border-top-width: 1px; */
+    background-color: #28a745; /* darken(#28a745, 15%); /* bg-success */
   }
 
 </style>
