@@ -19,11 +19,22 @@
     <p>
       Click on a world on the sidebar to begin!
     </p>
+    <p>
+      <test-event-bubble @click="log($event)" />
+    </p>
   </b-container>
 </template>
 
 <script>
+import TestEventBubble from './TestEventBubble';
 export default {
-
+  components: {
+    TestEventBubble
+  },
+  methods: {
+    log(anything) {
+      console.log(anything);
+    }
+  }
 }
 </script>
